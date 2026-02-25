@@ -148,27 +148,27 @@ Console.WriteLine(nombres.Contains("Carlos"));  // Devuelve verdadero o flaso de
 
 List<Persona> personas = new List<Persona>();
 
-personas.Add(new Persona("Joaquin",20,"México"); //solo te pide la instancia, no la referencia de donde se guardara
-personas.Add(new Persona("Enrique", 15, "Canada");
-personas.Add(new Persona("Elias", 8, "Colombia");
-personas.Add(new Persona("Luis", 18, "Uruguay");
-personas.Add(new Persona("Daniela", 21, "Brasil");
+personas.Add(new Persona("Joaquin", 20, "México")); //solo te pide la instancia, no la referencia de donde se guardara
+personas.Add(new Persona("Enrique", 15, "Canada"));
+personas.Add(new Persona("Elias", 8, "Colombia"));
+personas.Add(new Persona("Luis", 18, "Uruguay"));
+personas.Add(new Persona("Daniela", 21, "Brasil"));
 
 // Imprimiendo Datos
 foreach (Persona persona in personas)
 {
-    persona.MostrarDatos;
+    persona.MostrarDatos();
 }
 
 // personas.Sort(); // No funciona, deberia de hacerse una sobrecarga de operadores
 
 // Filtrando >18
-Console.WriteLine("Mayores de 18 años:");
+Console.WriteLine("\n\nMayores de 18 años:");
 foreach (Persona persona in personas)
 {
     if (persona.Edad >= 18)
     {
-        persona.MostrarDatos;
+        persona.MostrarDatos();
     }
 }
 
@@ -180,7 +180,7 @@ public class Persona
     public int Edad { get; set; }
 
     // Atributo static
-    public static string Pais { get; set; } = "España";
+    public string Pais { get; set; }
 
     // Constructro
     public Persona(string nombre, int edad, string pais)
@@ -194,14 +194,7 @@ public class Persona
     public void MostrarDatos()
     {
         Console.WriteLine($"Nombre  Objeto: {Nombre}");
-        Console.WriteLine($"Edad  Objeto: {Edad}");
+        Console.WriteLine($"Edad  Objeto: {Edad}\n");
 
     }
-
-    public static void MostrarPais()
-    {
-        Console.WriteLine($"Pais  Objeto: {Pais}");
-    }
-
-}
 }

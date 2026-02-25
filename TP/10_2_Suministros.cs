@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 public class Suministro // Unidad
 {
     // Atributos y Propiedades 
