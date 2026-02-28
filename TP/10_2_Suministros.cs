@@ -6,20 +6,21 @@ bool salir = false;
 
 while (!salir)
 {
-    /*try
-    {*/
+    try
+    {
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("Menu De Suministros");
-        Console.WriteLine("1)Mostrar Suministro \n" +
-            "2)Buscar Suministro \n" +
-            "3)Ordenar Suministro Por Nombre \n " +
-            "4)Inveritr Orden \n" +
-            "5)Vaciar Inventario\n \n" +
-            "6)Agregar Suministro\n" +
-            "7)Eliminar Suministro\n" +
-            "8)Salir");
+        Console.WriteLine("1) Mostrar Suministros");
+        Console.WriteLine("2) Buscar Suministro");
+        Console.WriteLine("3) Ordenar Suministro Por Nombre");
+        Console.WriteLine("4) Invertir Orden");
+        Console.WriteLine("5) Vaciar Inventario");
+        Console.WriteLine("6) Agregar Suministro");
+        Console.WriteLine("7) Eliminar Suministro");
+        Console.WriteLine("8) Salir");
 
-        Console.WriteLine("\nSelecciona La Operacion:");
+        Console.WriteLine("Selecciona La Operacion:");
+        Console.ForegroundColor= ConsoleColor.DarkYellow;    
 
         int opcion = int.Parse(Console.ReadLine() ?? "");
 
@@ -30,7 +31,8 @@ while (!salir)
                 break;
 
             case 2:
-                Console.WriteLine($"Ingresa El Nombre Del SUministro A Buscar: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Ingresa El Nombre Del Suministro A Buscar: ");
                 string nombre = Console.ReadLine() ?? "";
                 inventario.buscarSuministro(nombre);
                 break;
@@ -48,16 +50,70 @@ while (!salir)
                 break;
 
             case 6:
-                Console.WriteLine($"Ingresa El Nombre Del SUministro A Buscar: ");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"Ingresa El Nombre Del Suministro A Agregar: ");
+                Console.ForegroundColor = ConsoleColor.Blue;
                 string nombreSum = Console.ReadLine() ?? "";
 
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Cantidad O Vacio ");
+                Console.ForegroundColor = ConsoleColor.Blue;
                 string cantidad = Console.ReadLine() ?? "";
 
                 if (cantidad != "")
                 {
-                    Console.WriteLine($"Prioridad O Vacio ");
+                    // Excepcion
+                    int cantidadValida;
+                    if (!int.TryParse(cantidad, out cantidadValida))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        throw new numerotextoExcepcion("Ingresa un número, no letras.");
+                    }
+
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine($"Prioridad (1-3)");
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     string prioridad = Console.ReadLine() ?? "";
+                    int prioridadValida;
+                    while (!int.TryParse(prioridad, out prioridadValida) || prioridadValida < 1 || prioridadValida > 3)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("La prioridad debe ser un número entre 1 y 3.\n");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        Console.WriteLine("Prioridad (1-3): ");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        prioridad = Console.ReadLine() ?? "";
+                    }
+
+                    /* Con While
+                    int cantidadValida;
+                    while (!int.TryParse(cantidad, out cantidadValida))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Ingresa un número válido para la cantidad.\n");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        Console.WriteLine("Cantidad: ");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        cantidad = Console.ReadLine() ?? "";
+                    }
+
+                    int prioridadValida;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Prioridad (1-3):");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    string prioridad = Console.ReadLine() ?? "";
+                    while (!int.TryParse(prioridad, out prioridadValida) || prioridadValida < 1 || prioridadValida > 3)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("La prioridad debe ser un número entre 1 y 3.\n");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+
+                        Console.WriteLine("Prioridad (1-3): ");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        prioridad = Console.ReadLine() ?? "";
+                    }*/
 
                     inventario.agregarSuministro(nombreSum, int.Parse(cantidad), int.Parse(prioridad));
                 }
@@ -68,46 +124,59 @@ while (!salir)
                 break;
 
             case 7:
-                Console.WriteLine($"Ingresa El Nombre Del SUministro A Eliminar: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Ingresa El Nombre Del Suministro A Eliminar: ");
                 string nombreElim = Console.ReadLine() ?? "";
                 inventario.eliminarSuministro(nombreElim);
                 break;
 
             case 8:
-                salir = true;
+            Console.ForegroundColor = ConsoleColor.White;
+            salir = true;
                 break;
 
-            default: // <--- ¡Aquí van dos puntos, no punto y coma!
-                Console.WriteLine("\nOpcion No Válida");
+            default:
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Opcion No Válida\n");
                 break;
         }
-    //}
-    /*catch 
+    }
+    catch (FormatException)
     {
-        
-    }*/
+        Console.ForegroundColor= ConsoleColor.DarkRed;
+        Console.WriteLine("Debes Ingresar un número, baboso\n");
+    }
+    catch (algocadenaExcepcion ex)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"ERROR: {ex.Message}\n");
+    }
+    catch (numerotextoExcepcion ex)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"ERROR: {ex.Message}\n");
+    }
 }
 
-// Excepciones (2) no se cuales XD
+// Excepciones (2) cadena vacia y de numero a texto
 class algocadenaExcepcion : Exception
 {
     public algocadenaExcepcion(string mensaje) : base(mensaje) { }
     //system argument exception
 }
-
 class numerotextoExcepcion : Exception
 {
     public numerotextoExcepcion(string mensaje) : base(mensaje) { }
     //Systemformatexception
 }
 
-
+// Clases
 public class Suministro // Unidad
 {
     // Atributos y Propiedades 
     public string Nombre { get; set; }
     public int Cantidad { get; set; }
-    public int Prioridad { get; set; } //  DEbe tener 1= Alta ; 2 = Media ; 3 = Baja;
+    public int Prioridad { get; set; } //  Debe tener 1= Alta ; 2 = Media ; 3 = Baja;
 
     // Constructor ¿1?
     public Suministro (string nombre, int cantidad, int prioridad)
@@ -118,7 +187,7 @@ public class Suministro // Unidad
     }
 
 
-    // SobreCarga Constructor 
+    // SobreCarga Constructor  (2)
     public Suministro(string nombre)
     {
         Nombre = nombre;
@@ -129,7 +198,7 @@ public class Suministro // Unidad
     // Metodos
     public void MostrarInfo()
     {
-        Console.WriteLine($"Nombre: {Nombre} \nCantidad: {Cantidad} \n Prioridad: {Prioridad}");
+        Console.WriteLine($"Nombre: {Nombre} \nCantidad: {Cantidad} \nPrioridad: {Prioridad}\n");
     }
 }
 
@@ -159,47 +228,58 @@ public class Inventario // Tiene suministros
         Console.WriteLine("Inventario De Suministros");
         Console.ForegroundColor = ConsoleColor.Blue;
 
-        foreach(Suministro suministro in suministros)
+        if (suministros[0] == null || suministros.Length == 0)
         {
-            if (suministro==null)
+            throw new algocadenaExcepcion("El inventario está vacio");
+        }
+
+        foreach (Suministro suministro in suministros)
+        {
+            if (suministro != null)
             {
-                throw new algocadenaExcepcion("La cadena está vacia");
+                suministro.MostrarInfo();
+                //Console.WriteLine($"{suministro.Nombre}"); // de 2 jalas el metodo que trae todo, o se arma a mano
             }
-            Console.WriteLine($"{suministro.MostrarInfo}");
-            // Console.WriteLine($"{suministro.Nombre}"); // de 2 jalas el metodo que trae todo, o se arma a mano
         }
     }
 
     public void buscarSuministro(string nombre)
     {
         int indice = Array.FindIndex(suministros, s => s.Nombre.ToLower() == nombre.ToLower()); //s tal que del suministro s
+        Console.ForegroundColor = ConsoleColor.Blue;
 
         if (indice >= 0)
         {
-            Console.WriteLine($"{nombre} se encontro en la posicion {indice}");
+            Console.WriteLine($"{nombre} se encontro en la posicion {indice}\n");
         }
         else
         {
-            Console.WriteLine($"{nombre} no se encontro en el inventario");
+            Console.WriteLine($"{nombre} no se encontro en el inventario\n");
         }
     }
 
     public void ordenarPorNombre()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+
         Array.Sort(suministros,(x,y) => x.Nombre.CompareTo(y.Nombre));
-        Console.WriteLine("Suministros Ordenados por nombre");
+        Console.WriteLine("Suministros Ordenados por nombre\n");
     }
 
     public void invertirOrden()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+
         Array.Reverse(suministros);
-        Console.WriteLine("Orden Invertido");
+        Console.WriteLine("Orden Invertido\n");
     }
 
     public void vaciarInventario()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+
         Array.Clear(suministros, 0, suministros.Length);
-        Console.WriteLine($"Inventario borrado: {suministros.Length}");
+        Console.WriteLine($"Inventario borrado: {suministros.Length}\n");
     }
 
     // Agregar Suministro
@@ -215,7 +295,8 @@ public class Inventario // Tiene suministros
             Array.Resize(ref suministros, suministros.Length+1); // ref para no eliminar el arreglo y tener la longitud antes de cambiarla
             suministros[suministros.Length - 1] = new Suministro(nombre, cantidad, prioridad); //-1 para olvidar el indice 
         }
-        Console.WriteLine($"{nombre} agregado al inventario");
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine($"{nombre} agregado al inventario\n");
     }
 
     // Sobrecarga del metodo suministro con solo un parametro
@@ -235,11 +316,13 @@ public class Inventario // Tiene suministros
                 suministros[i] = suministros[i + 1]; 
             }
             Array.Resize(ref suministros, suministros.Length - 1);
-            Console.WriteLine($"{nombre} eliminado del inventario");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"{nombre} eliminado del inventario\n");
         }
         else
         {
-            Console.WriteLine($"{nombre} no encontrado");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"{nombre} no encontrado\n");
         }
     }
 
