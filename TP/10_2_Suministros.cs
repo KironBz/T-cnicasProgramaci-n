@@ -115,7 +115,9 @@ while (!salir)
                         prioridad = Console.ReadLine() ?? "";
                     }*/
 
-                    inventario.agregarSuministro(nombreSum, int.Parse(cantidad), int.Parse(prioridad));
+                    //inventario.agregarSuministro(nombreSum, int.Parse(cantidad), int.Parse(prioridad)); //Antes
+                    //Despues de la excepcion
+                    inventario.agregarSuministro(nombreSum, cantidadValida, prioridadValida);
                 }
                 else
                 {
