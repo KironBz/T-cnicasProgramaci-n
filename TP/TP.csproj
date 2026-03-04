@@ -9,8 +9,8 @@
 
   <ItemGroup>
     <Compile Remove="10_2_Suministros.cs" />
+    <Compile Remove="10_2_Tarea de Excepciones.cs" />
     <Compile Remove="12_1_Juego.cs" />
-    <Compile Remove="15_Interfaces.cs" />
     <Compile Remove="4_CodigoPersona.cs" />
     <Compile Remove="4_Persona.cs" />
     <Compile Remove="5_CodigoRectangulo.cs" />
@@ -27,8 +27,8 @@
 
   <ItemGroup>
     <None Include="10_2_Suministros.cs" />
+    <None Include="10_2_Tarea de Excepciones.cs" />
     <None Include="12_1_Juego.cs" />
-    <None Include="15_Interfaces.cs" />
     <None Include="4_Persona.cs" />
     <None Include="5_Rectangulo.cs" />
     <None Include="8_1_Excepciones.cs" />
