@@ -1,20 +1,66 @@
 ﻿// Programa Principal
 
-// Cambio para git
-
-/*
-string numero = "1234567";
-Console.WriteLine(numero.Length);
-*/
+using System.Diagnostics;
 
 bool continua = true;
-List <IPago> list = new List <IPago> ();
+List <IPago> listaPagos = new List <IPago> ();
 do
 {
     Console.WriteLine("Ingresa El Monto A Pagar");
+    string montoTexto = Console.ReadLine() ?? "";
+    if (double.TryParse(montoTexto, out double monto))
+    {
+        string modoPagoT;
+        int modoPago;
+        do
+        {
+            Console.WriteLine("1) Pago Con Tarjeta");
+            Console.WriteLine("1) Pago En Efectivo");
+            modoPagoT = Console.ReadLine() ?? "";
+        }
+        while (!int.TryParse(modoPagoT, out modoPago) || (modoPago !=1 && modoPago !=2 )); //While repite si es verdadero
+        
+        if(modoPago == 1)
+        {
+            Console.WriteLine("Ingresa El Número De Tarjeta");
+            string tarjeta = Console.ReadLine() ?? "";
+
+            // Creando Objeto Para Pago Con Tarjeta
+            IPago pago = new PagoTarjeta(tarjeta, monto);
+            listaPagos.Add (pago);
+        }
+        else
+        {
+            // Creando Objeto Para Pago En EFectivo
+            IPago pago = new PagoEfectivo(monto);
+            listaPagos.Add(pago);
+        }
+
+    }
+    else
+    {
+        Console.WriteLine("Error: Monto Invalido");
+        return;
+    }
+    Console.WriteLine("Presiona S Para Procesar Más Pagos");
+    char continuaT = char.Parse(Console.ReadLine() ?? "".ToLower());
     
+    if (continuaT == 's')
+    {
+        continua = true ;
+    }
+    else
+    {
+        continua = false;
+    }
 }
 while (continua);
+
+foreach(IPago pago in listaPagos)
+{
+    pago.ProcesarPago();
+}
+
 
 // Interfaz y clases
 
