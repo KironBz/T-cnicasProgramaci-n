@@ -1,6 +1,5 @@
 ﻿// Casteos
 
-
 // Conversion implicita, mas pequeño a grande
 
 int numeroEntero = 42;
@@ -50,12 +49,29 @@ Console.WriteLine(resultado);
 // Upper casting hijo - padre
 Animal miAnimal = new Perro();
 
-// Down Casting padre - hijp
-/*Animal animal = new Animal();
+// Down Casting padre - hijo
+Animal animal = new Animal();
+//  Perro perro = (perro)anumal;
+//animal as Perro();
+//Perro.ladrar();
+
+/*
 Perro perro = (Perro)new Animal();
 perro.Ladrar();
 */
+if (animal is Perro)
+{
+    Console.WriteLine("Es Un Perro");
+}
+
+object obj = animal; // imprimira la clase del objeto
+// string texto5 = obj as string;
+Console.WriteLine(obj);
+
+
 
 //object obj = "Hola mundo";
-object obj = miAnimal; // imprimira la clase del objeto
-Console.WriteLine(obj);
+/*
+ * object obj = miAnimal; // imprimira la clase del objeto
+ * Console.WriteLine(obj);
+*/
