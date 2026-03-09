@@ -64,8 +64,8 @@ if (animal is Perro)
     Console.WriteLine("Es Un Perro");
 }
 
-object obj = animal; // imprimira la clase del objeto
-// string texto5 = obj as string;
+object obj = "cadena"; // imprimira la clase del objeto
+string texto5 = obj as string;
 Console.WriteLine(obj);
 
 

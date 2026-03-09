@@ -14,6 +14,7 @@
     <Compile Remove="14_1_Casteos.cs" />
     <Compile Remove="14_2_Interfaces.cs" />
     <Compile Remove="14_3_Pagos.cs" />
+    <Compile Remove="15_Dispositivos.cs" />
     <Compile Remove="4_CodigoPersona.cs" />
     <Compile Remove="4_Persona.cs" />
     <Compile Remove="5_CodigoRectangulo.cs" />
@@ -35,6 +36,7 @@
     <None Include="14_1_Casteos.cs" />
     <None Include="14_2_Interfaces.cs" />
     <None Include="14_3_Pagos.cs" />
+    <None Include="15_Dispositivos.cs" />
     <None Include="4_Persona.cs" />
     <None Include="5_Rectangulo.cs" />
     <None Include="8_1_Excepciones.cs" />
