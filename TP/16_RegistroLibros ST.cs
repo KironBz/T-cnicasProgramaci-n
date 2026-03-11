@@ -1,4 +1,6 @@
 ﻿// Programa Principal
+// SE Movieron las listas de categorias a otro parte del codigo (la libreria).
+
 Libreria Libreria = new Libreria();
 try
 {
@@ -110,30 +112,30 @@ public class Libro
 public class LIbroFiccion : Libro
 {
     // Variable de Clase
-    List<string> tipoFiccion = new List<string> {"Fantasia", "Ciencia_Ficcion", "Misterio" ,"Romance", "Terror" };
+//    List<string> tipoFiccion = new List<string> {"Fantasia", "Ciencia_Ficcion", "Misterio" ,"Romance", "Terror" };
 
     // Constructor
     public LIbroFiccion(string titulo, string autor, string genero) : base (titulo, autor, genero)
     {
-        if (!tipoFiccion.Contains(genero))
+       /* if (!tipoFiccion.Contains(genero))
         {
             throw new ArgumentException("El Libro No Pertenece A Esta Categoria");
-        }
+        }*/
     }
 }
 
 public class LIbroTecnico : Libro
 {
     // Variable de Clase
-    List<string> tipoTecnico = new List<string> { "Matemáticas", "Historia", "Programación", "Filosofía", "Medicina" };
+ // List<string> tipoTecnico = new List<string> { "Matemáticas", "Historia", "Programación", "Filosofía", "Medicina" };
 
     // Constructor
     public LIbroTecnico(string titulo, string autor, string genero) : base(titulo, autor, genero)
     {
-        if (!tipoTecnico.Contains(genero))
+       /* if (!tipoTecnico.Contains(genero))
         {
             throw new ArgumentException("El Libro No Pertenece A Esta Categoria");
-        }
+        }*/
     }
 }
 
@@ -199,14 +201,19 @@ public class Libreria
 
         try
         {
-
-            nuevoLibro = new LIbroFiccion(titulo, autor, genero);
-            Libros.Add(nuevoLibro);
+            if (tipoFiccion.Contains(genero)
+            {
+                nuevoLibro = new LIbroFiccion(titulo, autor, genero);
+                Libros.Add(nuevoLibro);
+            }
+            else if(tipoTecnico.Contains(genero))
+            {
+                nuevoLibro = new LIbroFiccion(titulo, autor, genero);
+                Libros.Add(nuevoLibro);
+            }
         }
         catch (Exception ex)
         {
-            nuevoLibro = new LIbroTecnico(titulo, autor, genero);
-            Libros.Add(nuevoLibro);
         }
     }
 
