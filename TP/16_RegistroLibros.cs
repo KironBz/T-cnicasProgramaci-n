@@ -1,5 +1,8 @@
 ﻿// clase libro que tendra las propiedaes de los libros: titulo autor genero
 // Programa Principal
+/// <summary>
+///  ASDFGASDFG
+/// </summary>
 
 
 
