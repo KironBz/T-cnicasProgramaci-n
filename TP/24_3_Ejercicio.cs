@@ -45,7 +45,7 @@ public class GestorEstudiantes
                     writer.WriteLine(estudiante.ToString());
                 }    
             }
-
+            Console.WriteLine("Estudiantes no se que mas");
 
         }
         catch
