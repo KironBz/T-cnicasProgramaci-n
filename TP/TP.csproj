@@ -36,6 +36,7 @@
     <Compile Remove="9_2_Banco.cs" />
     <Compile Remove="Solid\31_1_SOLID.cs" />
     <Compile Remove="Solid\31_2_O.cs" />
+    <Compile Remove="Solid\31_3_L H.cs" />
     <Compile Remove="Solid\31_3_L.cs" />
   </ItemGroup>
 
@@ -67,6 +68,7 @@
     <None Include="9_2_Banco.cs" />
     <None Include="Solid\31_1_SOLID.cs" />
     <None Include="Solid\31_2_O.cs" />
+    <None Include="Solid\31_3_L H.cs" />
     <None Include="Solid\31_3_L.cs" />
   </ItemGroup>
 
