@@ -38,6 +38,9 @@
     <Compile Remove="Solid\31_2_O.cs" />
     <Compile Remove="Solid\31_3_L H.cs" />
     <Compile Remove="Solid\31_3_L.cs" />
+    <Compile Remove="Solid\31_4_I.cs" />
+    <Compile Remove="Solid\32_1_D.cs" />
+    <Compile Remove="Solid\32_2_V NoSolid.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -70,6 +73,9 @@
     <None Include="Solid\31_2_O.cs" />
     <None Include="Solid\31_3_L H.cs" />
     <None Include="Solid\31_3_L.cs" />
+    <None Include="Solid\31_4_I.cs" />
+    <None Include="Solid\32_1_D.cs" />
+    <None Include="Solid\32_2_V NoSolid.cs" />
   </ItemGroup>
 
 </Project>

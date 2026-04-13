@@ -1,4 +1,4 @@
-﻿usi// Principio Abierto / Cerrado
+﻿// Principio Abierto / Cerrado
 
 // SIn OCP
 
