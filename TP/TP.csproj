@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="04_CodigoPersona.cs" />
+    <Compile Remove="04_Persona.cs" />
+    <Compile Remove="05_CodigoRectangulo.cs" />
+    <Compile Remove="05_Rectangulo.cs" />
+    <Compile Remove="06_Calculadora.cs" />
+    <Compile Remove="07_1_Vehiculo.cs" />
+    <Compile Remove="07_2_Dispositivo.cs" />
+    <Compile Remove="08_1_Excepciones.cs" />
+    <Compile Remove="08_2_Arreglos_9_3_10_1.cs" />
+    <Compile Remove="09_1_Banco.cs" />
+    <Compile Remove="09_2_Banco.cs" />
     <Compile Remove="10_2_Suministros.cs" />
     <Compile Remove="10_2_Tarea de Excepciones.cs" />
     <Compile Remove="12_1_Juego.cs" />
@@ -22,18 +33,7 @@
     <Compile Remove="24_1_IDK.cs" />
     <Compile Remove="24_2_Archivos.cs" />
     <Compile Remove="24_3_Ejercicio.cs" />
-    <Compile Remove="4_CodigoPersona.cs" />
-    <Compile Remove="4_Persona.cs" />
-    <Compile Remove="5_CodigoRectangulo.cs" />
-    <Compile Remove="5_Rectangulo.cs" />
-    <Compile Remove="6_Calculadora.cs" />
-    <Compile Remove="7_1_Vehiculo.cs" />
-    <Compile Remove="7_2_Dispositivo.cs" />
-    <Compile Remove="8_1_Excepciones.cs" />
     <Compile Remove="8_2_Arreglos.cs" />
-    <Compile Remove="8_2_Arreglos_9_3_10_1.cs" />
-    <Compile Remove="9_1_Banco.cs" />
-    <Compile Remove="9_2_Banco.cs" />
     <Compile Remove="Solid\31_1_SOLID.cs" />
     <Compile Remove="Solid\31_2_O.cs" />
     <Compile Remove="Solid\31_3_L H.cs" />
@@ -58,17 +58,17 @@
     <None Include="24_1_IDK.cs" />
     <None Include="24_2_Archivos.cs" />
     <None Include="24_3_Ejercicio.cs" />
-    <None Include="4_Persona.cs" />
-    <None Include="5_Rectangulo.cs" />
-    <None Include="8_1_Excepciones.cs" />
-    <None Include="6_Calculadora.cs" />
-    <None Include="4_CodigoPersona.cs" />
-    <None Include="5_CodigoRectangulo.cs" />
-    <None Include="7_2_Dispositivo.cs" />
-    <None Include="7_1_Vehiculo.cs" />
-    <None Include="8_2_Arreglos_9_3_10_1.cs" />
-    <None Include="9_1_Banco.cs" />
-    <None Include="9_2_Banco.cs" />
+    <None Include="04_Persona.cs" />
+    <None Include="05_Rectangulo.cs" />
+    <None Include="08_1_Excepciones.cs" />
+    <None Include="06_Calculadora.cs" />
+    <None Include="04_CodigoPersona.cs" />
+    <None Include="05_CodigoRectangulo.cs" />
+    <None Include="07_2_Dispositivo.cs" />
+    <None Include="07_1_Vehiculo.cs" />
+    <None Include="08_2_Arreglos_9_3_10_1.cs" />
+    <None Include="09_1_Banco.cs" />
+    <None Include="09_2_Banco.cs" />
     <None Include="Solid\31_1_SOLID.cs" />
     <None Include="Solid\31_2_O.cs" />
     <None Include="Solid\31_3_L H.cs" />

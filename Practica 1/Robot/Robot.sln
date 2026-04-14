@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36915.13 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica 1", "Practica 1.csproj", "{F97BBAE9-1C5E-481F-9E66-B086E1D7C88F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot", "Robot.csproj", "{E9949C47-A94D-4429-9EF5-8B62EBF07071}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F97BBAE9-1C5E-481F-9E66-B086E1D7C88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F97BBAE9-1C5E-481F-9E66-B086E1D7C88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F97BBAE9-1C5E-481F-9E66-B086E1D7C88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F97BBAE9-1C5E-481F-9E66-B086E1D7C88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9949C47-A94D-4429-9EF5-8B62EBF07071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9949C47-A94D-4429-9EF5-8B62EBF07071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9949C47-A94D-4429-9EF5-8B62EBF07071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9949C47-A94D-4429-9EF5-8B62EBF07071}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {26E89212-D368-43CF-B370-EC29D3DBA33B}
+		SolutionGuid = {76BABA3E-1F43-4666-8C91-F7E1B1CE79EF}
 	EndGlobalSection
 EndGlobal
