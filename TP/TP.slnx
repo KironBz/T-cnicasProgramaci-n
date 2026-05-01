@@ -1,4 +1,4 @@
 <Solution>
   <Project Path="../PRUEBAS/PRUEBAS.csproj" Id="1af59840-532b-41d0-9637-e8721ccf6fa5" />
-  <Project Path="TP.csproj" />
+  <Project Path="Clases.csproj" />
 </Solution>

@@ -1,0 +1,163 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Estrucutras\**" />
+    <Compile Remove="Solid\**" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos\**" />
+    <Compile Remove="Tema 2\Clases y Objetos\**" />
+    <EmbeddedResource Remove="Estrucutras\**" />
+    <EmbeddedResource Remove="Solid\**" />
+    <EmbeddedResource Remove="Tema 2\04 - Interfaces y eventos\**" />
+    <EmbeddedResource Remove="Tema 2\Clases y Objetos\**" />
+    <None Remove="Estrucutras\**" />
+    <None Remove="Solid\**" />
+    <None Remove="Tema 2\04 - Interfaces y eventos\**" />
+    <None Remove="Tema 2\Clases y Objetos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="04_CodigoPersona.cs" />
+    <Compile Remove="04_Persona.cs" />
+    <Compile Remove="05_CodigoRectangulo.cs" />
+    <Compile Remove="05_Rectangulo.cs" />
+    <Compile Remove="06_Calculadora.cs" />
+    <Compile Remove="07_1_Vehiculo.cs" />
+    <Compile Remove="07_2_Dispositivo.cs" />
+    <Compile Remove="08_1_Excepciones.cs" />
+    <Compile Remove="08_2_Arreglos_9_3_10_1.cs" />
+    <Compile Remove="09_1_Banco.cs" />
+    <Compile Remove="09_2_Banco.cs" />
+    <Compile Remove="10_2_Suministros.cs" />
+    <Compile Remove="10_2_Tarea de Excepciones.cs" />
+    <Compile Remove="12_1_Juego.cs" />
+    <Compile Remove="14_1_Casteos.cs" />
+    <Compile Remove="14_2_Interfaces.cs" />
+    <Compile Remove="14_3_Pagos.cs" />
+    <Compile Remove="15_Dispositivos.cs" />
+    <Compile Remove="16_RegistroLibros ST.cs" />
+    <Compile Remove="16_RegistroLibros.cs" />
+    <Compile Remove="17_ Ej Tipo Examen.cs" />
+    <Compile Remove="18_Examen.cs" />
+    <Compile Remove="24_1_IDK.cs" />
+    <Compile Remove="24_2_Archivos.cs" />
+    <Compile Remove="24_3_Ejercicio.cs" />
+    <Compile Remove="36_37_Festival Clase.cs" />
+    <Compile Remove="36_37_Festival.cs" />
+    <Compile Remove="8_2_Arreglos.cs" />
+    <Compile Remove="Tema 2\01 - Primeros pasos\04_CodigoPersona.cs" />
+    <Compile Remove="Tema 2\01 - Primeros pasos\04_Persona.cs" />
+    <Compile Remove="Tema 2\01 - Primeros pasos\05_CodigoRectangulo.cs" />
+    <Compile Remove="Tema 2\01 - Primeros pasos\05_Rectangulo.cs" />
+    <Compile Remove="Tema 2\02 - Clases, Herencia y Sobrecarga\06_Calculadora.cs" />
+    <Compile Remove="Tema 2\02 - Clases, Herencia y Sobrecarga\07_1_Vehiculo.cs" />
+    <Compile Remove="Tema 2\02 - Clases, Herencia y Sobrecarga\07_2_Dispositivo.cs" />
+    <Compile Remove="Tema 2\03 - Excepciones y arreglos\08_1_Excepciones.cs" />
+    <Compile Remove="Tema 2\03 - Excepciones y arreglos\08_2_Arreglos_9_3_10_1.cs" />
+    <Compile Remove="Tema 2\03 - Excepciones y arreglos\09_1_Banco.cs" />
+    <Compile Remove="Tema 2\03 - Excepciones y arreglos\09_2_Banco.cs" />
+    <Compile Remove="Tema 2\03 - Excepciones y arreglos\10_2_Suministros.cs" />
+    <Compile Remove="Tema 2\03 - Excepciones y arreglos\10_2_Tarea de Excepciones.cs" />
+    <Compile Remove="Tema 2\03 - Excepciones y arreglos\12_1_Juego.cs" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos Exmn\14_1_Casteos.cs" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos Exmn\14_2_Interfaces.cs" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos Exmn\14_3_Pagos.cs" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos Exmn\15_Dispositivos.cs" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos Exmn\16_RegistroLibros ST.cs" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos Exmn\16_RegistroLibros.cs" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos Exmn\17_ Ej Tipo Examen.cs" />
+    <Compile Remove="Tema 2\04 - Interfaces y eventos Exmn\18_Examen.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\ExtensionesBiblioteca\Class1.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.App\Program.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Class1.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Entidades\Dron.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Entidades\Mision.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Entidades\Posicion.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Enum\Enums.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Extensiones\ExtensionesDron.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Utilidades\UtilidadesCalculoDron.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Utilidades\UtilidadesGeograficas.cs" />
+    <Compile Remove="Tema 2\05 - Bilbiotecas\ValidacionesBiblioteca\Class1.cs" />
+    <Compile Remove="Tema 2\06 - Almacenamiento y manejo de archivos\24_2_Archivos.cs" />
+    <Compile Remove="Tema 3\24_3_Ejercicio.cs" />
+    <Compile Remove="Tema 3\Solid\31_1_SOLID.cs" />
+    <Compile Remove="Tema 3\Solid\31_2_O.cs" />
+    <Compile Remove="Tema 3\Solid\31_3_L H.cs" />
+    <Compile Remove="Tema 3\Solid\31_3_L.cs" />
+    <Compile Remove="Tema 3\Solid\31_4_I.cs" />
+    <Compile Remove="Tema 3\Solid\32_1_D.cs" />
+    <Compile Remove="Tema 3\Solid\32_2_V NoSolid.cs" />
+    <Compile Remove="Tema 4\01 - Estructuras Lineales\34_Arreglos.cs" />
+    <Compile Remove="Tema 4\01 - Estructuras Lineales\34_Cola.cs" />
+    <Compile Remove="Tema 4\01 - Estructuras Lineales\35_ListaEnlazada.cs" />
+    <Compile Remove="Tema 4\01 - Estructuras Lineales\35_Listas.cs" />
+    <Compile Remove="Tema 4\01 - Estructuras Lineales\35_Pilas.cs" />
+    <Compile Remove="Tema 4\01 - Estructuras Lineales\36_37_Festival Clase.cs" />
+    <Compile Remove="Tema 4\01 - Estructuras Lineales\36_37_Festival.cs" />
+    <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_2_Tuplas.cs" />
+    <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_3 Arbol.cs" />
+    <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_Estructuras no lineales.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Tema 2\01 - Primeros pasos\04_CodigoPersona.cs" />
+    <None Include="Tema 2\01 - Primeros pasos\04_Persona.cs" />
+    <None Include="Tema 2\01 - Primeros pasos\05_CodigoRectangulo.cs" />
+    <None Include="Tema 2\01 - Primeros pasos\05_Rectangulo.cs" />
+    <None Include="Tema 2\02 - Clases, Herencia y Sobrecarga\06_Calculadora.cs" />
+    <None Include="Tema 2\02 - Clases, Herencia y Sobrecarga\07_1_Vehiculo.cs" />
+    <None Include="Tema 2\02 - Clases, Herencia y Sobrecarga\07_2_Dispositivo.cs" />
+    <None Include="Tema 2\03 - Excepciones y arreglos\08_1_Excepciones.cs" />
+    <None Include="Tema 2\03 - Excepciones y arreglos\08_2_Arreglos_9_3_10_1.cs" />
+    <None Include="Tema 2\03 - Excepciones y arreglos\09_1_Banco.cs" />
+    <None Include="Tema 2\03 - Excepciones y arreglos\09_2_Banco.cs" />
+    <None Include="Tema 2\03 - Excepciones y arreglos\10_2_Suministros.cs" />
+    <None Include="Tema 2\03 - Excepciones y arreglos\10_2_Tarea de Excepciones.cs" />
+    <None Include="Tema 2\03 - Excepciones y arreglos\12_1_Juego.cs" />
+    <None Include="Tema 2\04 - Interfaces y eventos Exmn\14_1_Casteos.cs" />
+    <None Include="Tema 2\04 - Interfaces y eventos Exmn\14_2_Interfaces.cs" />
+    <None Include="Tema 2\04 - Interfaces y eventos Exmn\14_3_Pagos.cs" />
+    <None Include="Tema 2\04 - Interfaces y eventos Exmn\15_Dispositivos.cs" />
+    <None Include="Tema 2\04 - Interfaces y eventos Exmn\16_RegistroLibros ST.cs" />
+    <None Include="Tema 2\04 - Interfaces y eventos Exmn\16_RegistroLibros.cs" />
+    <None Include="Tema 2\04 - Interfaces y eventos Exmn\17_ Ej Tipo Examen.cs" />
+    <None Include="Tema 2\04 - Interfaces y eventos Exmn\18_Examen.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\ExtensionesBiblioteca\Class1.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.App\Program.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Class1.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Entidades\Dron.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Entidades\Mision.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Entidades\Posicion.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Dominio\Enum\Enums.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Extensiones\ExtensionesDron.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Utilidades\UtilidadesCalculoDron.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\MonitoreoDrones\MonitoreoDrones.Utilidades\UtilidadesGeograficas.cs" />
+    <None Include="Tema 2\05 - Bilbiotecas\ValidacionesBiblioteca\Class1.cs" />
+    <None Include="Tema 2\06 - Almacenamiento y manejo de archivos\24_2_Archivos.cs" />
+    <None Include="Tema 3\24_3_Ejercicio.cs" />
+    <None Include="Tema 3\Solid\31_1_SOLID.cs" />
+    <None Include="Tema 3\Solid\31_2_O.cs" />
+    <None Include="Tema 3\Solid\31_3_L H.cs" />
+    <None Include="Tema 3\Solid\31_3_L.cs" />
+    <None Include="Tema 3\Solid\31_4_I.cs" />
+    <None Include="Tema 3\Solid\32_1_D.cs" />
+    <None Include="Tema 3\Solid\32_2_V NoSolid.cs" />
+    <None Include="Tema 4\01 - Estructuras Lineales\34_Arreglos.cs" />
+    <None Include="Tema 4\01 - Estructuras Lineales\34_Cola.cs" />
+    <None Include="Tema 4\01 - Estructuras Lineales\35_ListaEnlazada.cs" />
+    <None Include="Tema 4\01 - Estructuras Lineales\35_Listas.cs" />
+    <None Include="Tema 4\01 - Estructuras Lineales\35_Pilas.cs" />
+    <None Include="Tema 4\01 - Estructuras Lineales\36_37_Festival Clase.cs" />
+    <None Include="Tema 4\01 - Estructuras Lineales\36_37_Festival.cs" />
+    <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_2_Tuplas.cs" />
+    <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_3 Arbol.cs" />
+    <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_Estructuras no lineales.cs" />
+  </ItemGroup>
+
+</Project>

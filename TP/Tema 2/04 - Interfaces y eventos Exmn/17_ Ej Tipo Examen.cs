@@ -13,7 +13,4 @@ public class Competencia
         Nombre = nombre;
         Deporte = deporte;
     }
-
-
-
 }
