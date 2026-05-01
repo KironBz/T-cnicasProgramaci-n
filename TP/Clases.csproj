@@ -93,6 +93,7 @@
     <Compile Remove="Tema 3\Solid\31_4_I.cs" />
     <Compile Remove="Tema 3\Solid\32_1_D.cs" />
     <Compile Remove="Tema 3\Solid\32_2_V NoSolid.cs" />
+    <Compile Remove="Tema 3\Solid\32_3_Solid.cs" />
     <Compile Remove="Tema 4\01 - Estructuras Lineales\34_Arreglos.cs" />
     <Compile Remove="Tema 4\01 - Estructuras Lineales\34_Cola.cs" />
     <Compile Remove="Tema 4\01 - Estructuras Lineales\35_ListaEnlazada.cs" />
@@ -148,6 +149,7 @@
     <None Include="Tema 3\Solid\31_4_I.cs" />
     <None Include="Tema 3\Solid\32_1_D.cs" />
     <None Include="Tema 3\Solid\32_2_V NoSolid.cs" />
+    <None Include="Tema 3\Solid\32_3_Solid.cs" />
     <None Include="Tema 4\01 - Estructuras Lineales\34_Arreglos.cs" />
     <None Include="Tema 4\01 - Estructuras Lineales\34_Cola.cs" />
     <None Include="Tema 4\01 - Estructuras Lineales\35_ListaEnlazada.cs" />
