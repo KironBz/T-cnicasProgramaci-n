@@ -101,9 +101,9 @@
     <Compile Remove="Tema 4\01 - Estructuras Lineales\35_Pilas.cs" />
     <Compile Remove="Tema 4\01 - Estructuras Lineales\36_37_Festival Clase.cs" />
     <Compile Remove="Tema 4\01 - Estructuras Lineales\36_37_Festival.cs" />
+    <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_1_Estructuras no lineales.cs" />
     <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_2_Tuplas.cs" />
     <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_3 Arbol.cs" />
-    <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_Estructuras no lineales.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -159,7 +159,7 @@
     <None Include="Tema 4\01 - Estructuras Lineales\36_37_Festival.cs" />
     <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_2_Tuplas.cs" />
     <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_3 Arbol.cs" />
-    <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_Estructuras no lineales.cs" />
+    <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_1_Estructuras no lineales.cs" />
   </ItemGroup>
 
 </Project>
