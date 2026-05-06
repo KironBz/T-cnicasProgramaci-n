@@ -1,8 +1,48 @@
 ﻿// Sistema De Analisis De Tormentas electircas
 
-// RECORD - Tupla inmutable (tupla constante), palabras que no cambiaran
+// Crear descargas - Tupla inmutable (tupla constante), palabras que no cambiaran
+var origen = new Descarga(19.43, -99.13, 320.5);
+var rama1 = new Descarga(25.12, -78.62, 320.5);
+var rama2 = new Descarga(19.3328, -99.1821, 210.7);
+var rama2a = new Descarga(19.15, -99.17, 95.3);
 
-// T PTM P D
+// Construir el arbol de propagacion
+var analizador = new AnalizadorTormenta(origen);
+var nodorama1 = analizador.Propagacion.Origen;
+analizador.Propagacion.Bifurcar(analizador.Propagacion.Origen, rama1);
+analizador.Propagacion.Bifurcar(analizador.Propagacion.Origen, rama2);
+var nodoRama2 = analizador.Propagacion.Origen.Ramas[1]; // el indice 0 es rama 1, indice 1 es para rama 2
+analizador.Propagacion.Bifurcar(nodoRama2, rama2a);
+
+// Registrar sensores del diccionario
+analizador.Red.Registrar( new SensorDeCampoElectrico("CE-01", 19.42, -99.10) );
+analizador.Red.Registrar( new SensorDeCampoElectrico("CE-02", 19.44, -99.14) );
+analizador.Red.Registrar( new SensorDeCampoElectrico("CE-03", 19.43, -99.13) );
+analizador.Red.Registrar( new SensorAcustico("AC-01", 19.40, -99.12) );
+analizador.Red.Registrar( new SensorAcustico("AC-02", 19.47, -99.16) );
+
+// Generar Reporte
+analizador.GenerarReporte();
+
+// Sensor mas cercano a una descarga
+var cercano = analizador.DetectarMasCercano(rama2a);
+Console.WriteLine($"Sensor Más Cercano {cercano.Id}");
+
+// Acceso por ID
+var s = analizador.Red.ObtenerPorID("CE-02");
+Console.WriteLine($"Consulta directa: {s.Medir()}");
+
+// Excepcion
+try
+{
+    analizador.Red.ObtenerPorID("CE-05");
+}
+catch (SensorNoEncontradoException ex)
+{
+    Console.WriteLine($"[Error] {ex.Message}");
+}
+
+// RECORD - Tupla inmutable (tupla constante), palabras que no cambiaran
 record Descarga ( double Latitud, double Longitud, double Kilovoltios ) // seran constantes, NO PROPIEDADES
 {
     public double DistanciaA(Descarga otra)
