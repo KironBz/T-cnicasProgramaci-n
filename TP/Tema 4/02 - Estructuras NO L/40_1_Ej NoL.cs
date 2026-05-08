@@ -267,3 +267,8 @@ public class AnalizadorTormenta: IAnalizador
     }
 }
 
+/*
+
+
+
+ */
