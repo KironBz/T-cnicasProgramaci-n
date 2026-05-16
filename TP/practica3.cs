@@ -248,7 +248,7 @@ public class Ordenador
         productos.AddRange(mayores);
     }
 
-    // ALGORITMO DE ORDENAMIENTO: MergeSort (El Que Se Debe Arreglar)
+    // ALGORITMO DE ORDENAMIENTO: MergeSort
 
     public static List<Productos> MergeSortPorNombre(List<Productos> productos)
     {
