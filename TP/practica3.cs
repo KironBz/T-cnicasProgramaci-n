@@ -37,14 +37,7 @@ Console.WriteLine("Orden por precio");
 Ordenador.QuickSortPorPrecio(productosParaOrdenarPrecio);
 MostrarListaProductos(productosParaOrdenarPrecio);
 
-/*    LA DEL ERROR    
-var productosParaOrdenarNombre = new List<Productos>(gestor.ObtenerListaProductos());
-Console.WriteLine("\nOrden por nombre");
-var productosOrdenadosMerge = Ordenador.MergeSortPorNombre(productosParaOrdenarNombre);
-MostrarListaProductos(productosParaOrdenarNombre);
-*/
-
-/* LA DEL ERROR (CORREGIDA)    */
+/*  - CORREGIDA -  */
 var productosParaOrdenarNombre = new List<Productos>(gestor.ObtenerListaProductos());
 Console.WriteLine("\nOrden por nombre");
 var productosOrdenadosMerge = Ordenador.MergeSortPorNombre(productosParaOrdenarNombre);
