@@ -51,12 +51,13 @@
     <Compile Remove="36_37_Festival Clase.cs" />
     <Compile Remove="36_37_Festival.cs" />
     <Compile Remove="8_2_Arreglos.cs" />
-    <Compile Remove="Practica3.cs" />
+    <Compile Remove="RECETA.cs" />
     <Compile Remove="Tema 2\01 - Primeros pasos\04_CodigoPersona.cs" />
     <Compile Remove="Tema 2\01 - Primeros pasos\04_Persona.cs" />
     <Compile Remove="Tema 2\01 - Primeros pasos\05_CodigoRectangulo.cs" />
     <Compile Remove="Tema 2\01 - Primeros pasos\05_Rectangulo.cs" />
     <Compile Remove="Tema 2\02 - Clases, Herencia y Sobrecarga\06_1_Calculadora.cs" />
+    <Compile Remove="Tema 2\02 - Clases, Herencia y Sobrecarga\06_2_Calculadora .cs" />
     <Compile Remove="Tema 2\02 - Clases, Herencia y Sobrecarga\07_1_Vehiculo.cs" />
     <Compile Remove="Tema 2\02 - Clases, Herencia y Sobrecarga\07_2_Dispositivo.cs" />
     <Compile Remove="Tema 2\03 - Excepciones y arreglos\08_1_Excepciones.cs" />
@@ -102,17 +103,21 @@
     <Compile Remove="Tema 4\01 - Estructuras Lineales\35_Pilas.cs" />
     <Compile Remove="Tema 4\01 - Estructuras Lineales\36_37_Festival Clase.cs" />
     <Compile Remove="Tema 4\01 - Estructuras Lineales\36_37_Festival.cs" />
+    <Compile Remove="Tema 4\02 - Estructuras NO L\40_1_Ej NoL.cs" />
+    <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_1_Estructuras no lineales.cs" />
     <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_2_Tuplas.cs" />
     <Compile Remove="Tema 4\02 - Estructuras NO L\Diccionario\38_3 Arbol.cs" />
     <Compile Remove="Tema 4\03 - Algoritmos\A estrella .cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="RECETA.cs" />
     <None Include="Tema 2\01 - Primeros pasos\04_CodigoPersona.cs" />
     <None Include="Tema 2\01 - Primeros pasos\04_Persona.cs" />
     <None Include="Tema 2\01 - Primeros pasos\05_CodigoRectangulo.cs" />
     <None Include="Tema 2\01 - Primeros pasos\05_Rectangulo.cs" />
     <None Include="Tema 2\02 - Clases, Herencia y Sobrecarga\06_1_Calculadora.cs" />
+    <None Include="Tema 2\02 - Clases, Herencia y Sobrecarga\06_2_Calculadora .cs" />
     <None Include="Tema 2\02 - Clases, Herencia y Sobrecarga\07_1_Vehiculo.cs" />
     <None Include="Tema 2\02 - Clases, Herencia y Sobrecarga\07_2_Dispositivo.cs" />
     <None Include="Tema 2\03 - Excepciones y arreglos\08_1_Excepciones.cs" />
@@ -158,6 +163,8 @@
     <None Include="Tema 4\01 - Estructuras Lineales\35_Pilas.cs" />
     <None Include="Tema 4\01 - Estructuras Lineales\36_37_Festival Clase.cs" />
     <None Include="Tema 4\01 - Estructuras Lineales\36_37_Festival.cs" />
+    <None Include="Tema 4\02 - Estructuras NO L\40_1_Ej NoL.cs" />
+    <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_1_Estructuras no lineales.cs" />
     <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_2_Tuplas.cs" />
     <None Include="Tema 4\02 - Estructuras NO L\Diccionario\38_3 Arbol.cs" />
     <None Include="Tema 4\03 - Algoritmos\A estrella .cs" />
